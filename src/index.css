@@ -1,0 +1,23 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+  font-family: "Inter";
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(
+      ellipse 55% 60% at 15% 5%,
+      rgba(0, 123, 140, 0.35) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 45% 55% at 82% 85%,
+      rgba(104, 26, 138, 0.22) 0%,
+      transparent 70%
+    ),
+    #050606;
+  color: white;
+
+}
+
