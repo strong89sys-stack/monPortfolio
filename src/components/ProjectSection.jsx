@@ -29,7 +29,7 @@ export default function ProjectSection({id}) {
             technos: ["React", "Firebase"],
             github: "#",
             demo: "#",
-            image: "/src/assets/img/screen.png"
+            image: "/public/img/screen.png"
         },
         {
             id: 2,
@@ -38,7 +38,7 @@ export default function ProjectSection({id}) {
             technos: ["React", "Firebase"],
             github: "#",
             demo: "#",
-            image: "/src/assets/img/screen.png"
+            image: "/public/img/screen.png"
         },
         {
             id: 3,
@@ -47,7 +47,7 @@ export default function ProjectSection({id}) {
             technos: ["React", "Firebase"],
             github: "#",
             demo: "#",
-            image: "/src/assets/img/screen.png"
+            image: "/public/img/screen.png"
         },
         {
             id: 4,
@@ -56,7 +56,7 @@ export default function ProjectSection({id}) {
             technos: ["React", "Firebase"],
             github: "#",
             demo: "#",
-            image: "/src/assets/img/screen.png"
+            image: "/public/img/screen.png"
         }
     ]
 

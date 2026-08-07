@@ -1,5 +1,6 @@
 import './../style/about.css'
 import { FaRegUser } from "react-icons/fa6";
+import profil from './../assets/img/twitter-logo-transparent.png'
 
 import { motion } from 'framer-motion';
 
@@ -13,7 +14,7 @@ export default function AboutSection({skills, about}) {
         className="about-section" id={about}>
             <div className="about">
                 <div className="left">
-                    <img src="/src/assets/img/twitter-logo-transparent.png" alt="image" />
+                    <img src={profil} alt="image" />
                 </div>
                 <div className="right">
                     <div className="title">
