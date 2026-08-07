@@ -1,10 +1,16 @@
 import './../style/about.css'
 import { FaRegUser } from "react-icons/fa6";
 
-export default function AboutSection({skills}) {
+import { motion } from 'framer-motion';
+
+export default function AboutSection({skills, about}) {
     return (
         <>
-        <div className="about-section">
+        <motion.div 
+        initial={{opacity: 0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.6, ease:"easeOut"}}
+        className="about-section" id={about}>
             <div className="about">
                 <div className="left">
                     <img src="/src/assets/img/twitter-logo-transparent.png" alt="image" />
@@ -15,7 +21,7 @@ export default function AboutSection({skills}) {
                         <h2><span>à</span> Propos</h2>
                     </div>
                     <div className="text">
-                        Passionné par le développement front-end, je transforme des maquettes complexes en interfaces interactives et performantes. 
+                        Passionné par le développement, je transforme des maquettes complexes en interfaces interactives et performantes. 
                         Mon approche se concentre sur la qualité du code, l'accessibilité et les animations fluides pour offrir une expérience utilisateur irréprochable.
                     </div>
                     <div className="skills">
@@ -25,7 +31,7 @@ export default function AboutSection({skills}) {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
         </>
     )
 }

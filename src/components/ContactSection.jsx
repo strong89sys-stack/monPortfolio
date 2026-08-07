@@ -1,9 +1,9 @@
 import './../style/contact.css'
-
-export default function ContactSection() {
+import { motion } from 'framer-motion'
+export default function ContactSection({contact}) {
     return (
         <>
-        <section className="contact-section">
+        <motion.section initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 1, ease: 'easeOut'}} className="contact-section" id={contact}>
             <div className="contact">
                 <div className="title">
                     <h2>Parlons de votre projet</h2>
@@ -20,7 +20,7 @@ export default function ContactSection() {
                     <button>Envoyer</button>
                 </form>
             </div>
-        </section>
+        </motion.section>
         </>
     )
 }

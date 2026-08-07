@@ -1,6 +1,8 @@
 import './mainPage.css'
-import { useState, useEffect } from 'react'
+import { useId } from 'react'
 import skills from './../skills'
+
+import { motion } from 'framer-motion'
 
 import Header from "../components/Header"
 import MainBanner from "../components/MainBanner"
@@ -15,21 +17,28 @@ export default function MainPage() {
     const skill = skills.map((s) => s.title)
     
     console.log(skill)
+    const projectId = useId()
+    const contactId = useId()
+    const aboutId = useId()
 
 
     return (
         <>
-        <div className="container">
-            <Header />
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity: 1, y:0}}
+        transition={{duration:0.8, ease:"easeOut"}}
+        className="container">
+            <Header project={projectId} contact={contactId} about={aboutId} />
             <div className="mainContent">
-                <MainBanner />
-                <AboutSection skills={skill} />
-                <ProjectSection />
+                <MainBanner id={projectId} contact={contactId} />
+                <AboutSection skills={skill} about={aboutId} />
+                <ProjectSection id={projectId} />
                 <RoadSection />
-                <ContactSection />
+                <ContactSection contact={contactId} />
             </div>
             <Footer />
-        </div>
+        </motion.div>
         </>
     )
 }

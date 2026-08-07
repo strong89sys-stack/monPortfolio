@@ -1,6 +1,6 @@
 import './../style/header.css'
 
-export default function Header() {
+export default function Header({project, contact, about}) {
     return (
         <>
         <div className="navbar">
@@ -10,9 +10,9 @@ export default function Header() {
                 </div>
                 <nav>
                     <ul>
-                        <li>Projets</li>
-                        <li><span>à</span> propos</li>
-                        <li>Contact</li>
+                        <li><a href={`#${project}`}>Projets</a></li>
+                        <li><a href={`#${about}`}><span>à</span> propos</a></li>
+                        <li><a href={`#${contact}`}>Contact</a></li>
                         <li><button>Télécharger CV</button></li>
                     </ul>
                     

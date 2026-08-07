@@ -1,10 +1,12 @@
 import './../style/road.css'
 import { MdOutlineRoute } from "react-icons/md";
 
+import { easeIn, motion } from 'framer-motion'
+
 export default function RoadSection() {
     return (
         <>
-        <section className="road-section">
+        <motion.section initial={{y : '50px', opacity: 0}} whileInView={{y : 0, opacity: 1}} transition={{duration: 0.5, ease: 'easeIn'}} className="road-section">
             <div className="title">
                 <span><MdOutlineRoute /></span>
                 <h2>Mon Parcours</h2>
@@ -39,7 +41,7 @@ export default function RoadSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
         </>
     )
 }

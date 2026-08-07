@@ -2,22 +2,27 @@ import './../style/banner.css'
 import { FaArrowRight } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
 
-export default function MainBanner() {
+import { motion } from 'framer-motion';
+
+export default function MainBanner({id, contact}) {
     return (
         <>
-        <div className="hero">
+        <motion.div 
+        initial={{y:0}}
+        whileInView={{y:0}}
+        className="hero">
             <div className="banner">
                 <div className="left">
                     <div className="text">
-                        <p className="title">Développeur REACT</p>
+                        <p className="title">Développeur Full Stack</p>
                         <p className="name">Adelazize <span>Kabore</span></p>
                         <p className="description">
                             Je conçois des expériences web rapides, élégantes et centrées sur l'utilisateur
                         </p>
                     </div>
                     <div className="btn">
-                        <a href='#' className='btn-primary'>Voir mes projets <FaArrowRight /></a>
-                        <a href='#' className='btn-secondary'>Me contacter</a>
+                        <a href={`#${id}`} className='btn-primary'>Voir mes projets <FaArrowRight /></a>
+                        <a href={`#${contact}`} className='btn-secondary'>Me contacter</a>
                     </div>
                     <div className="link">
                         <a href='#'><FaCode /></a>
@@ -27,7 +32,7 @@ export default function MainBanner() {
                     <img src="/src/assets/img/profil.png" width="394px" height="499px" alt="profil" />
                 </div>
             </div>
-        </div>
+        </motion.div>
         </>
     )
 }
