@@ -100,6 +100,11 @@
             display: flex;
             justify-content: flex-end;
             border: 2px solid;
+            img{
+                width: 394px;
+                height: 499px;
+                object-fit: cover;
+            }
         }
     }
 }

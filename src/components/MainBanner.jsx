@@ -1,7 +1,7 @@
 import './../style/banner.css'
 import { FaArrowRight } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
-import profil from './../assets/img/profil.png'
+import profil from './../assets/img/profil1.png'
 
 import { motion } from 'framer-motion';
 
@@ -30,7 +30,7 @@ export default function MainBanner({id, contact}) {
                     </div>
                 </div>
                 <div className="right">
-                    <img src={profil} width="394px" height="499px" alt="profil" loading='lazy' />
+                    <img src={profil} alt="profil" loading='lazy' />
                 </div>
             </div>
         </motion.div>

@@ -1,6 +1,6 @@
 import './../style/about.css'
 import { FaRegUser } from "react-icons/fa6";
-import profil from './../assets/img/twitter-logo-transparent.png'
+import profil from './../assets/img/profil1.png'
 
 import { motion } from 'framer-motion';
 
