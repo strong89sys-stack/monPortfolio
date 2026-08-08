@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="36" viewBox="0 0 140 36" fill="none" overflow="visible">
+  <defs>
+    <linearGradient id="goldOrange" x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FAD961"/>
+      <stop offset="1" stop-color="#F76B1C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Monogram -->
+  <circle cx="18" cy="18" r="16.2" stroke="url(#goldOrange)" stroke-width="2.2"/>
+  <circle cx="18" cy="18" r="14.1" stroke="#C80000" stroke-width="1.35" stroke-dasharray="20 5 20 5" stroke-linecap="round" transform="rotate(-8 18 18)"/>
+  <path d="M13.1 22.1L17.1 10.5H18.9L22.9 22.1H20.8L19.9 19.2H16.1L15.2 22.1H13.1ZM16.7 17.4H19.3L18 13.3L16.7 17.4Z" fill="url(#goldOrange)"/>
+
+  <!-- Wordmark -->
+  <text x="38" y="24.8"
+        font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="21"
+        font-weight="800"
+        letter-spacing="-0.45"
+        fill="#FFFFFF">Aziz Dev</text>
+</svg>

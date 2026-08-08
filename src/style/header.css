@@ -21,13 +21,11 @@
         max-width: 1300px;
 
         .left{
-            h1{
-                color: rgb(182 235 255 / var(--tw-text-opacity, 1));
-                font-family: sans-serif;
-                font-weight: 700;
-                span{
-                    font-family: serif;
-                }
+            display: flex;
+            align-items: center;
+            img{
+                fill: rgb(182, 235, 255);
+                object-fit: cover;
             }
         }
 

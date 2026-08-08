@@ -1,4 +1,5 @@
 import './../style/header.css'
+import logo from './../assets/img/Aziz_Dev_logo_140x36_fixed.svg'
 
 export default function Header({project, contact, about}) {
     return (
@@ -6,7 +7,7 @@ export default function Header({project, contact, about}) {
         <div className="navbar">
             <div className="header">
                 <div className="left">
-                    <h1><span>D</span>evPortfolio</h1>
+                    <img src={logo} alt="logo" />
                 </div>
                 <nav>
                     <ul>

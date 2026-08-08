@@ -6,7 +6,8 @@ const PROJECTS = [
         technos: ["HTML", "CSS", "PHP", "JAVASCRIPT"],
         github: "#",
         demo: "#",
-        image: "/img/gest_peage.png"
+        image: "/img/gest_peage.png",
+        nature: "Académique"
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const PROJECTS = [
         technos: ["Vue.js", "PHP"],
         github: "#",
         demo: "#",
-        image: "/img/screen.png"
+        image: "/img/screen.png",
+        nature: "Personnel"
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const PROJECTS = [
         technos: ["React"],
         github: "https://github.com/strong89sys-stack/Trinity-Game",
         demo: "https://trinity-game-wheat.vercel.app/",
-        image: "/img/tic-tac-toe.png"
+        image: "/img/tic-tac-toe.png",
+        nature: "Personnel"
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ const PROJECTS = [
         technos: ["React", "Firebase"],
         github: "#",
         demo: "#",
-        image: "/img/screen.png"
+        image: "/img/screen.png",
+        nature: "Personnel"
     }
 ]
 

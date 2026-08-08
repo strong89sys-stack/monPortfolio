@@ -53,7 +53,7 @@ export default function ProjectSection({id}) {
             
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
-            transition={{duration: 0.5}}
+            transition={{duration: 1, ease: 'easeOut'}}
             className="sticky-container">
 
                 <motion.div 
@@ -77,27 +77,28 @@ export default function ProjectSection({id}) {
                                 <img src={project.image} alt={project.title} loading='lazy' />
                             </div>
                             <div className="bottom">
-                                <div className='left'>
-                                    <h3 className="card-title">{project.title}</h3>
-                                    <p className="description">{project.description}</p>
-                                    
-                                    <div className="techno">
-                                        {project.technos.map((tech, i) => (
-                                            <span key={i}>{tech}</span>
-                                        ))}
+                                <div className="text" style={{display: 'flex',}}>
+                                    <div className='left'>
+                                        <h3 className="card-title">{project.title}</h3>
+                                        <p className="description">{project.description}</p>
+                                        
+                                        <div className="techno">
+                                            {project.technos.map((tech, i) => (
+                                                <span key={i}>{tech}</span>
+                                            ))}
+                                        </div>
                                     </div>
-
-                                    <div className="link">
-                                        <a href={project.github}>
-                                            <span><FaCode /></span> GitHub
-                                        </a>
-                                        <a href={project.demo}>
-                                            <span><MdOutlineOpenInNew /></span> Live Demo
-                                        </a>
+                                    <div className="right">
+                                        <span>{project.nature}</span>
                                     </div>
                                 </div>
-                                <div className="right">
-                                    <span>Personnel</span>
+                                <div className="link">
+                                    <a href={project.github}>
+                                        <span><FaCode /></span> GitHub
+                                    </a>
+                                    <a href={project.demo}>
+                                        <span><MdOutlineOpenInNew /></span> Live Demo
+                                    </a>
                                 </div>
                             </div>
                         </div>
