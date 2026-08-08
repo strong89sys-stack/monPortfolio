@@ -14,7 +14,7 @@ export default function AboutSection({skills, about}) {
         className="about-section" id={about}>
             <div className="about">
                 <div className="left">
-                    <img src={profil} alt="image" />
+                    <img src={profil} alt="image" loading='lazy' />
                 </div>
                 <div className="right">
                     <div className="title">

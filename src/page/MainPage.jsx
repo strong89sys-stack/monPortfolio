@@ -15,8 +15,7 @@ import Footer from '../components/Footer'
 export default function MainPage() {
 
     const skill = skills.map((s) => s.title)
-    
-    console.log(skill)
+ 
     const projectId = useId()
     const contactId = useId()
     const aboutId = useId()

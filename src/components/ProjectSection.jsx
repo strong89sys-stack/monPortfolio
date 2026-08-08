@@ -1,11 +1,13 @@
 import './../style/project.css'
-import { FaRegFolderOpen } from "react-icons/fa";
+// import { FaRegFolderOpen } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import { FaArrowDown } from "react-icons/fa6";
 
 import { useRef, useState, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion';
+
+import PROJECTS from '../project';
 
 export default function ProjectSection({id}) {
 
@@ -21,44 +23,6 @@ export default function ProjectSection({id}) {
         };
     }, []);
 
-    const PROJECTS = [
-        {
-            id: 1,
-            title: "Expense Tracker",
-            description: "cette application web de gestion de ferme avicole permet aux producteurs de mieux valoriser leurs activités en facilitant la promotion et la vente de leurs produits. Il centralise la gestion des clients, le suivi des commandes, les campagnes promotionnelles et l'analyse des ventes afin d'améliorer la fidélisation de la clientèle et d'augmenter les revenus de l'exploitation.",
-            technos: ["React", "Firebase"],
-            github: "#",
-            demo: "#",
-            image: "/img/screen.png"
-        },
-        {
-            id: 2,
-            title: "Expense Tracker",
-            description: "cette application web de gestion de ferme avicole permet aux producteurs de mieux valoriser leurs activités en facilitant la promotion et la vente de leurs produits. Il centralise la gestion des clients, le suivi des commandes, les campagnes promotionnelles et l'analyse des ventes afin d'améliorer la fidélisation de la clientèle et d'augmenter les revenus de l'exploitation.",
-            technos: ["React", "Firebase"],
-            github: "#",
-            demo: "#",
-            image: "/img/screen.png"
-        },
-        {
-            id: 3,
-            title: "Expense Tracker",
-            description: "cette application web de gestion de ferme avicole permet aux producteurs de mieux valoriser leurs activités en facilitant la promotion et la vente de leurs produits. Il centralise la gestion des clients, le suivi des commandes, les campagnes promotionnelles et l'analyse des ventes afin d'améliorer la fidélisation de la clientèle et d'augmenter les revenus de l'exploitation.",
-            technos: ["React", "Firebase"],
-            github: "#",
-            demo: "#",
-            image: "/img/screen.png"
-        },
-        {
-            id: 4,
-            title: "Expense Tracker",
-            description: "cette application web de gestion de ferme avicole permet aux producteurs de mieux valoriser leurs activités en facilitant la promotion et la vente de leurs produits. Il centralise la gestion des clients, le suivi des commandes, les campagnes promotionnelles et l'analyse des ventes afin d'améliorer la fidélisation de la clientèle et d'augmenter les revenus de l'exploitation.",
-            technos: ["React", "Firebase"],
-            github: "#",
-            demo: "#",
-            image: "/img/screen.png"
-        }
-    ]
 
     const sectionRef = useRef(null)
 
@@ -69,11 +33,6 @@ export default function ProjectSection({id}) {
         // et se termine quand la section atteint le centre de l'écran.
         offset: ["start start", "end end"]
     })
-
-    // On transforme le scroll (de 0 à 1) en propriétés d'animation fluides
-    // const opacity = useTransform(scrollYProgress, [0, 1], [0, 1])
-    // const y = useTransform(scrollYProgress, [0, 1], [100, 0])
-    // const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1])
 
     const x = useTransform(
         scrollYProgress,
@@ -97,11 +56,6 @@ export default function ProjectSection({id}) {
             transition={{duration: 0.5}}
             className="sticky-container">
 
-                {/* <motion.div className="title" >
-                    <span><FaRegFolderOpen /></span>
-                    <h2>Mes Projets</h2>
-                </motion.div> */}
-
                 <motion.div 
                     className="project-card"
                     style={{ x }}
@@ -120,7 +74,7 @@ export default function ProjectSection({id}) {
                     {PROJECTS.map((project) => (
                         <div className="card" key={project.id}>
                             <div className="top">
-                                <img src={project.image} alt={project.title} />
+                                <img src={project.image} alt={project.title} loading='lazy' />
                             </div>
                             <div className="bottom">
                                 <div className='left'>

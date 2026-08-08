@@ -30,7 +30,7 @@ export default function MainBanner({id, contact}) {
                     </div>
                 </div>
                 <div className="right">
-                    <img src={profil} width="394px" height="499px" alt="profil" />
+                    <img src={profil} width="394px" height="499px" alt="profil" loading='lazy' />
                 </div>
             </div>
         </motion.div>
